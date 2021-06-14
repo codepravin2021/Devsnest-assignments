@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Monoton&display=swap" rel="stylesheet">
+    <title>Clock</title>
+</head>
+    <style>
+        .clock {
+            width: 500px;
+            height: 500px;
+            display: inline-block;
+            border-radius: 50%;
+            border: 30px solid rgb(62, 117, 237);
+            padding: 55px;
+            position: absolute;
+            margin: auto;
+            top: 50px;
+            right: 50px;
+            bottom: 50px;
+            left: 50px;
+            box-shadow: 10px 10px 25px 2px;
+            background-image: url("4882066.jpg");
+        }
+
+        .clock::before {
+            content: '';
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 2px groove rgb(119, 161, 253);
+            background-color: rgb(33, 73, 160);
+            box-shadow: 10px 10px 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .sec,
+        .min,
+        .hour {
+            position: relative;
+            transform-origin: bottom;
+        }
+
+        .sec {
+            height: 280px;
+            width: 5.9px;
+            border-radius: 50%;
+            left: 249px;
+            top: -30px;
+            background: #FF0000;
+            transform: translatex(-50%) rotate(127deg);
+            transform-origin: bottom;
+            box-shadow: 10px 15px 8px rgba(0, 0, 0, 0.891)
+        }
+
+        .min {
+            height: 270px;
+            width: 10px;
+            left: 248px;
+            top: -302px;
+            border-radius: 35%;
+            background: rgb(0, 0, 0);
+            transform: translateX(-50%) rotate(30deg);
+            transform-origin: bottom;
+            border: 1px solid rgb(95, 159, 255);
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.789);
+        }
+
+        .hour {
+            height: 210px;
+            width: 14px;
+            border-radius: 35%;
+            left: 240px;
+            background: rgb(0, 0, 0);
+            top: -515px;
+            border: 1px solid rgb(95, 159, 255);
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.775)
+        }
+
+        .twelve, .three, .six, .nine {
+            position: relative;
+            transform-origin: bottom;
+            font-family: 'Monoton', cursive;
+            font-size: 50px;
+            color: rgba(137, 168, 235, 0.385);
+
+        }
+
+        .twelve {
+            left: 225px;
+            top: -810px;
+        }
+
+        .three {
+            left: 510px;
+            top: -628px;
+        }
+
+        .six {
+            left: 240px;
+            top: -445px;
+        }
+
+        .nine {
+            left: -29.5px;
+            top: -780px;
+        }
+
+        .name   {
+            position: absolute;
+            top: 480px;
+            left: 35.5%;
+            font-size: 35px;
+            color: rgba(135, 165, 230, 0.357);
+            font-family: 'Great Vibes', cursive;
+        }
+    </style>
+
+<body>
+    <div class="clock">
+        <div class="name">Pravin Masekar</div>
+        <div class="sec"></div>
+        <div class="min"></div>
+        <div class="hour"></div>
+        <div class="twelve">12</div>
+        <div class="three">3</div>
+        <div class="six">6</div>
+        <div class="nine">9</div>
+    </div>
+</body>
+
+</html>
